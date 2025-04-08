@@ -13,7 +13,7 @@ export default function ContactForm() {
     setStatus('loading');
 
     try {
-      const res = await fetch('https://i0c7k5b731.execute-api.us-east-1.amazonaws.com/contact', {
+      const res = await fetch(import.meta.env.VITE_API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
